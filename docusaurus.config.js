@@ -15,7 +15,7 @@ import rehypeKatex from 'rehype-katex';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '卖凉皮的',
-  tagline: '只见广厦千万，不见寒士欢颜！',
+  tagline: '只见广厦千万，不见寒士欢颜！！',
   favicon: 'img/favicon.ico',
   url: 'https://makainb.com',
   baseUrl: '/',
