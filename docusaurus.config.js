@@ -23,7 +23,8 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'makainb', // Usually your GitHub org/user name.
-  projectName: 'makainb.github.io', // Usually your repo name.
+  projectName: 'docusaurus', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
 
   markdown: {
     mermaid: true,
