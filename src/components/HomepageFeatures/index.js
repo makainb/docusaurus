@@ -4,32 +4,29 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: '夯实基础',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        不积跬步无以至千里, 仰望星空还需脚踏实地
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: '构建体系',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        告别碎片化学习，帮助你构筑你自己的知识体系
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: '全栈开发',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        以Java开发为背景，全栈开发，DevOps
       </>
     ),
   },

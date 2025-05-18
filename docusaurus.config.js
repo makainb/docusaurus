@@ -82,8 +82,7 @@ const config = {
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
       type: 'text/css',
-      integrity:
-        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      integrity: 'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
       crossorigin: 'anonymous',
     },
   ],
@@ -102,12 +101,69 @@ const config = {
         items: [
           // {label: '文档',type: 'docSidebar',sidebarId: 'tutorialSidebar'},
           {to: '/docs/intro', label: '导航', sidebarId:'allSidebar'},
-          {to: '/docs/java/intro', label: 'Java'},
+          {to: '/docs/java/intro', label: 'Java', sidebarId:'javaSidebar'},
           {to: '/docs/algorithm/intro', label: '算法'},
-          // {to: '/blog', label: '博客'},
+          {to: '/blog', label: '博客'},
           // { href: 'https://github.com/facebook/docusaurus', label: 'GitHub', position: 'right', },
 
           { to: '/about/aboutme', label: '关于', position: 'right', },
+
+          /*
+          {
+            type: 'dropdown',
+            label: 'Community',
+            position: 'left',
+            items: [
+              {
+                label: 'Facebook',
+                href: 'https://www.facebook.com',
+              },
+              {
+                // label: 'Facebook',
+                // href: 'https://www.facebook.com',
+                type: 'doc',
+                label: 'Social',
+                docId: 'java/intro',
+              },
+              // ... more items
+            ],
+          },
+
+
+
+          {
+            label:'123',
+            type: 'dropdown',
+            position: 'right',
+            items: [
+              {
+                type: 'html',
+                value: '<hr class="dropdown-separator">',
+              },
+              {
+                type: 'html',
+                className: 'dropdown-archived-versions',
+                value: '<b>Archived versions</b>',
+              },
+              {
+                href: 'https://v1.docusaurus.io',
+                label: '1.x.x',
+              },
+              {
+                type: 'html',
+                value: '<hr class="dropdown-separator">',
+              },
+              {
+                to: '/versions',
+                label: 'All versions',
+              },
+            ],
+          },
+
+
+          */
+
+
         ],
       },
 

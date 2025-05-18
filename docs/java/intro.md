@@ -1,3 +1,7 @@
+---
+title: java-intro
+---
+
 # Java导航
 
 Java导航，嘿嘿
@@ -15,3 +19,6 @@ graph TD;
 $$
 I = \int_0^{2\pi} \sin(x)\,dx
 $$
+
+
+111
