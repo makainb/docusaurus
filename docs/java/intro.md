@@ -20,5 +20,6 @@ $$
 I = \int_0^{2\pi} \sin(x)\,dx
 $$
 
+$I = \int_0^{2\pi} \sin(x)\,dx$
 
 111
