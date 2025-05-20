@@ -20,6 +20,7 @@ const sidebars = {
 
   allSidebar: ['intro'],
   javaSidebar: ['java/intro'],
+  toolsSidebar: ['tools/idea-config','tools/idea-plugins',],
 
 
   // api: [

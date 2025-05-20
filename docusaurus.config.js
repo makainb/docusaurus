@@ -100,13 +100,11 @@ const config = {
         },
         items: [
           // {label: '文档',type: 'docSidebar',sidebarId: 'tutorialSidebar'},
-          {to: '/docs/intro', label: '导航', sidebarId:'allSidebar'},
-          {to: '/docs/java/intro', label: 'Java', sidebarId:'javaSidebar'},
-          {to: '/docs/algorithm/intro', label: '算法'},
+          { label: '导航', sidebarId:'allSidebar', to: '/docs/intro',},
+          // { label: 'Java', sidebarId:'javaSidebar', to: '/docs/java/intro',},
+          { label: '算法', to: '/docs/algorithm/intro',},
+          { label: '工具', sidebarId:'toolsSidebar', to: '/docs/tools/idea-config',},
           {to: '/blog', label: '博客'},
-          // { href: 'https://github.com/facebook/docusaurus', label: 'GitHub', position: 'right', },
-
-          { to: '/about/aboutme', label: '关于', position: 'right', },
 
           /*
           {
@@ -129,39 +127,25 @@ const config = {
             ],
           },
 
+          */
 
 
           {
-            label:'123',
+            label:'关于',
             type: 'dropdown',
             position: 'right',
             items: [
-              {
-                type: 'html',
-                value: '<hr class="dropdown-separator">',
-              },
-              {
-                type: 'html',
-                className: 'dropdown-archived-versions',
-                value: '<b>Archived versions</b>',
-              },
-              {
-                href: 'https://v1.docusaurus.io',
-                label: '1.x.x',
-              },
-              {
-                type: 'html',
-                value: '<hr class="dropdown-separator">',
-              },
-              {
-                to: '/versions',
-                label: 'All versions',
-              },
+              // 分隔符
+              { to: '/about/aboutme', label: '关于我',},
+              { to: '/about/aboutsite', label: '关于本站', },
+
+              // { type: 'html', value: '<hr class="dropdown-separator">',},           
+              // { type: 'html', value: '<hr class="dropdown-separator">',},
+              // // 分组名
+              // { type: 'html', value: '<b>Archived versions</b>', className: 'dropdown-archived-versions',},
+              
             ],
           },
-
-
-          */
 
 
         ],
