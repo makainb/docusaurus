@@ -94,10 +94,10 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: '藏鲸阁',
-        logo: {
-          alt: '网站 Logo',
-          src: 'img/logo.jpg',
-        },
+        // logo: {
+        //   alt: '网站 Logo',
+        //   src: 'img/logo.jpg',
+        // },
         items: [
           // {label: '文档',type: 'docSidebar',sidebarId: 'tutorialSidebar'},
           { label: '导航', sidebarId:'allSidebar', to: '/docs/intro',},
