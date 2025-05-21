@@ -20,7 +20,13 @@ const sidebars = {
 
   allSidebar: ['intro'],
   javaSidebar: ['java/intro'],
-  toolsSidebar: ['tools/idea-config','tools/idea-plugins',],
+  toolsSidebar: [
+    {
+      type: 'category',
+      label: '开发工具',
+      items: ['tools/jetbrains-idea',],
+    }
+  ],
 
 
   // api: [

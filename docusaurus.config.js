@@ -93,7 +93,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: '卖凉皮的',
+        title: '藏鲸阁',
         logo: {
           alt: '网站 Logo',
           src: 'img/logo.jpg',
@@ -103,7 +103,7 @@ const config = {
           { label: '导航', sidebarId:'allSidebar', to: '/docs/intro',},
           // { label: 'Java', sidebarId:'javaSidebar', to: '/docs/java/intro',},
           { label: '算法', to: '/docs/algorithm/intro',},
-          { label: '工具', sidebarId:'toolsSidebar', to: '/docs/tools/idea-config',},
+          { label: '工具', sidebarId:'toolsSidebar', to: '/docs/tools/jetbrains-idea',},
           {to: '/blog', label: '博客'},
 
           /*

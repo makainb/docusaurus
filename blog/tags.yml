@@ -1,19 +1,9 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+python:
+  label: go语言
+  permalink: /go
+  description: go语言也没有kotlin好用，但是有一个优点，可以编译本地文件。
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
-
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+java:
+  label: java
+  permalink: /java
+  description: Java语言确实不如Kotlin好用。
