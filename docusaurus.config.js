@@ -14,8 +14,8 @@ import rehypeKatex from 'rehype-katex';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '卖凉皮的',
-  tagline: '只见广厦千万，不见寒士欢颜！！',
+  title: '凉皮店主',
+  tagline: '只见广厦千万，不见寒士欢颜！！！',
   favicon: 'img/favicon.ico',
   url: 'https://makainb.com',
   baseUrl: '/',
@@ -104,7 +104,8 @@ const config = {
           // { label: 'Java', sidebarId:'javaSidebar', to: '/docs/java/intro',},
           { label: '算法', to: '/docs/algorithm/intro',},
           { label: '工具', sidebarId:'toolsSidebar', to: '/docs/tools/jetbrains-idea',},
-          {to: '/blog', label: '博客'},
+          { label: 'MOM文档', sidebarId:'momSidebar', to: '/docs/mom/use/base-tools',},
+          // {to: '/blog', label: '博客'},
 
           /*
           {

@@ -8,10 +8,10 @@ date: 2025-05-21
 ## 博客信息
 :::info[博客信息]
 
-博客框架：vuepress  
-博客主题：vuepress-theme-reco v2  
+博客框架：docusaurus
 源码位置：github  
-部署：github action  
+部署：github action 
+域名：Dynadot 
 
 :::
 
