@@ -1,5 +1,6 @@
 ---
 title: 权限控制
+sidebar_position: 3
 ---
 
 ## 简单介绍RBAC权限模型和OAuth2
