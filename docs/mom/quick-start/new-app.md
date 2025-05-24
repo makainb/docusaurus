@@ -116,3 +116,16 @@ case "$1" in
 esac
 
 ```
+
+## 维护命令
+
+```bash
+# 启动
+./deploy.sh start
+
+# 停止
+./deploy.sh stop
+
+# 重启
+./deploy.sh restart
+```
