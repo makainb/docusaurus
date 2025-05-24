@@ -33,7 +33,7 @@ title: 应用接入
 
 
 在 `application.yaml` 中有两个你必须添加的配置：
-- ${spring.application.name}.yml
+- `${spring.application.name}.yml` 
 - discovery-nacos-mom.yml
 
 剩下的都是可选配置，例如redis, aps的msql数据库：
