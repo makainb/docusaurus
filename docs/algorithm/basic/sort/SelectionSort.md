@@ -4,7 +4,7 @@ sidebar_position: 1
 ---
 
 ## 算法思路
-i起始为0,目标是数组长度，每次递增1。n为数组长度。  
+i 起始为 0 , 目标是数组长度-1，每次递增1。n为数组长度。  
 在 `i ~ n-1` 范围上，找到最小值并放入 i 位置，然后 `i+1 ~ n-1` 范围继续。
 
 ## 算法步骤
@@ -28,23 +28,18 @@ i起始为0,目标是数组长度，每次递增1。n为数组长度。
 ## 算法代码（Java）
 ```java
 public static void selectionSort(int[] arr) {
-
     if (arr == null || arr.length < 2) {
         return;
     }
 
-    for (int i = 0; i < arr.length; i++) {
-        int min = i;
+    for (int i = 0; i < arr.length - 1; i++) {
+        int minIndex = i;
         for (int j = i + 1; j < arr.length; j++) {
-            if (arr[j] < arr[min]) {
-                min = j;
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
             }
         }
-
-        if (i != min && arr[i] > arr[min]) {
-            swap(arr, i, min);
-        }
-
+        swap(arr, i, minIndex);
     }
 }
 ```
