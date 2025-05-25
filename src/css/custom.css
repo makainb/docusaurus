@@ -32,3 +32,29 @@
 /* .navbar__logo{
   display: none;
 } */
+
+
+.code-block-highlighted-line {
+  background-color: rgb(72, 77, 91);
+  span[class*='codeLineNumber'] {
+    background-color: rgb(72, 77, 91);
+  }
+}
+.code-block-add-line {
+  background-color: #213227;
+  span[class*='codeLineNumber'] {
+    background-color: #213227;
+  }
+}
+.code-block-update-line {
+  background-color: #362d1e;
+  span[class*='codeLineNumber'] {
+    background-color: #362d1e;
+  }
+}
+.code-block-error-line {
+  background-color: #ff000020;
+  span[class*='codeLineNumber'] {
+    background-color: #ff000020;
+  }
+}

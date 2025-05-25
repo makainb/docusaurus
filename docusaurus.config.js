@@ -102,7 +102,7 @@ const config = {
           // {label: '文档',type: 'docSidebar',sidebarId: 'tutorialSidebar'},
           { label: '导航', sidebarId:'allSidebar', to: '/docs/intro',},
           // { label: 'Java', sidebarId:'javaSidebar', to: '/docs/java/intro',},
-          { label: '算法', to: '/docs/algorithm/intro',},
+          { label: '算法', to: '/docs/algorithm/intro',sidebarId:'algorithmSidebar',},
           { label: '工具', sidebarId:'toolsSidebar', to: '/docs/tools/jetbrains-idea',},
           { label: 'MOM文档', sidebarId:'momSidebar', to: '/docs/mom/use/base-tools',},
           // {to: '/blog', label: '博客'},
@@ -199,9 +199,40 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       */
+      // prism: {
+      //   theme: prismThemes.github,
+      //   darkTheme: prismThemes.dracula,
+      // },
       prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        theme: prismThemes.vsDark,
+        magicComments: [
+          {
+            className: 'code-block-highlighted-line',
+            line: 'highlight-next-line',
+            block: { start: 'highlight-start', end: 'highlight-end' }
+          },
+          {
+            className: 'code-block-add-line',
+            line: 'highlight-add-line',
+            block: { start: 'highlight-add-start', end: 'highlight-add-end' }
+          },
+          {
+            className: 'code-block-update-line',
+            line: 'highlight-update-line',
+            block: { start: 'highlight-update-start', end: 'highlight-update-end' }
+          },
+          {
+            className: 'code-block-error-line',
+            line: 'highlight-error-line',
+            block: { start: 'highlight-error-start', end: 'highlight-error-end' }
+          },
+        ],
+        // languages enabled by default: https://github.com/FormidableLabs/prism-react-renderer/blob/master/packages/generate-prism-languages/index.ts#L9-L23
+        // prism supported languages: https://prismjs.com/#supported-languages
+        additionalLanguages: [
+          'java',
+          'json',
+        ],
       },
     }),
 };
