@@ -119,6 +119,88 @@ O(1)，只用常数级别的变量（`left`, `right`, `mid`）
 
 ## 变种1 大于等于最左
 
+用二分法查找大于等于 `Num` 最左边的数。
+
+### 步骤分析
+
+有一个数组 `[3, 6, 8, 8, 8, 13, 17, 25]`，找大于等于 `8` 的数
+初始化下标 `index = -1` 
+
+第1轮： left = 0, right = 7, mid = (0+7)/2 = 3
+结果：arr[3] = 8, 8 >= 8 ,更新 index = mid = 3 , right = mid -1 = 2，left \<= right 可以分下一轮）。
+
+第2轮：left = 0, right = 2, mid = (0+2)/2 = 1
+结果：arr[1] = 6, 6 \< 8 , 更新left = mid + 1 = 2, left \<= right  可以分下一轮
+
+第3轮：left = 2, right = 2, mid = (2+2)/2 = 2
+结果：arr[2] = 8, 8 >= 8 , 更新 index = mid = 2 , right = mid -1 = 1，left > right 停止循环。
+
+### 算法思路
+由上面的步骤得出规律：
+1. 初始化 `index` 为 `-1` 
+2. 大于等于num时，更新 `index`，`right = mid - 1`。
+3. 小于num时，`left = mid + 1` 。
+4. 只要 `left` \<= `right` 就可以继续下一轮循环
+
+### 代码实现
+```java
+/**
+ * 二分搜索之大于等于最左边
+ * @param arr
+ * @param key
+ * @return
+ */
+public static int binarySearchFindLeft(int[] arr, int key) {
+    int index = -1;
+    if (arr == null || arr.length == 0) {
+        return index;
+    }
+
+    int left = 0;
+    int right = arr.length - 1;
+    int mid;
+    while (left <= right) {
+        mid = (left + right) / 2;
+        if (key > arr[mid]) {
+            left = mid + 1;
+        } else  {
+            right = mid - 1;
+            index = mid;
+        }
+    }
+
+    return index;
+}
+```
+
+
+
 ## 变种2 小于等于最右
 
+### 算法思路
+跟上面的相同，只是方向反了.
 
+### 代码实现
+```java
+public static int binarySearchFindRight(int[] arr, int key) {
+    int index = -1;
+    if (arr == null || arr.length == 0) {
+        return index;
+    }
+
+    int left = 0;
+    int right = arr.length - 1;
+    int mid;
+    while (left <= right) {
+        mid = (left + right) / 2;
+        if (key < arr[mid]) {
+            right = mid - 1;
+        } else  {
+            left = mid + 1;
+            index = mid;
+        }
+    }
+
+    return index;
+}
+```
