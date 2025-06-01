@@ -204,3 +204,56 @@ public static int binarySearchFindRight(int[] arr, int key) {
     return index;
 }
 ```
+
+## 变种3 寻找峰值
+
+### 题目
+在元素两两不等的整数数组 `nums` 中，寻找峰值元素（值严格大于左右相邻值），可返回任意一个峰值元素的索引。
+
+可将数组两端虚拟设为无穷小，且要求实现时间复杂度为 $O(\log n)$ 的算法来求解 。 
+
+力扣原题：https://leetcode.cn/problems/find-peak-element/
+
+### 步骤分析
+
+懒得写
+
+### 算法思路
+
+懒得写
+
+### 代码实现
+```java
+public static int findPeakElement(int[] nums) {
+    int len = nums.length;
+
+    if (len == 1) {
+        return 0;
+    }
+
+    if (nums[0] > nums[1]) {
+        return 0;
+    }
+
+
+    if (nums[len - 1] > nums[len - 2]) {
+        return len - 1;
+    }
+
+    int l = 1, r = len - 2, m, index = 0;
+    while(l <= r){
+        m = (l + r) / 2;
+        if (nums[m] < nums[m - 1]) {
+            r = m - 1;
+        } else if (nums[m] < nums[m + 1]) {
+            l = m + 1;
+        } else {
+            index = m;
+            break;
+        }
+
+    }
+
+    return index;
+}
+```
