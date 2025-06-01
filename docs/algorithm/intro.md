@@ -3,7 +3,7 @@ title: 算法导航
 ---
 
 ## 前置知识
-【[对数器](/algorithm/pre/Validator.md)】
+【[对数器](/algorithm/pre/Validator.md)】|【[等差数列](/algorithm/pre/AP.md)】【[等比数列](/algorithm/pre/GP.md)】
 
 ## 基础算法
 
