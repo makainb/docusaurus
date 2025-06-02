@@ -1,6 +1,6 @@
 ---
 title: 等比数列
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 ## **一、等比数列的定义**  
