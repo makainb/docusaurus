@@ -13,3 +13,6 @@ title: 算法导航
 ### 搜索算法
 【[二分搜索](/algorithm/basic/search/BinarySearch.md)】
 
+
+## 数据结构
+【[链表](/algorithm/ds/LinkedList.md)】
