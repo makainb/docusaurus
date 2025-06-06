@@ -80,5 +80,49 @@ https://leetcode.cn/problems/add-two-numbers
 
 ### 代码
 ```java
+public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+
+    if (l1 == null) {
+        return l2;
+    }
+    if (l2 == null) {
+        return l1;
+    }
+
+    ListNode firstNode = null;
+    ListNode current = null;
+
+    int one = 0;
+    for (int temp = 0, sum = 0; l1 != null || l2 != null; l1 = l1 == null ? null : l1.next, l2 = l2 == null ? null : l2.next) {
+        temp = (l1 == null ? 0 : l1.val) + (l2 == null ? 0 : l2.val) + one;
+        one = temp / 10;
+        sum = temp % 10;
+        if (firstNode == null) {
+            firstNode = new ListNode(sum);
+            current = firstNode;
+        } else {
+            current.next = new ListNode(sum);
+            current = current.next;
+        }
+    }
+
+    if (one > 0) {
+        current.next = new ListNode(one);
+    }
+
+
+    return firstNode;
+}
+
+```
+
+
+## 划分链表
+
+### 力扣原题
+https://leetcode.cn/problems/partition-list/description/
+
+### 代码
+```java
 
 ```
