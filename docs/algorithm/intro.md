@@ -15,4 +15,4 @@ title: 算法导航
 
 
 ## 数据结构
-【[链表](/algorithm/ds/LinkedList.md)】
+【[链表](/algorithm/ds/LinkedList.md)】|【[队列和栈](/algorithm/ds/QueueStack.md)】
