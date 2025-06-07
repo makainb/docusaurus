@@ -164,5 +164,124 @@ class MyStack {
 https://leetcode.cn/problems/min-stack/
 
 ### 代码
+说明：由于Java本身的Stack效率低下，造成时间比较慢，可以用自定义数组实现栈，效率会高点，不过用处不大，学习原理就行。
+
 ```java
+class MinStack {
+
+    private Stack<Integer> stack;
+    private Stack<Integer> minStack;
+
+    public MinStack() {
+        stack = new Stack<>();
+        minStack = new Stack<>();
+    }
+
+    public void push(int val) {
+        stack.push(val);
+        if (minStack.isEmpty() || val < minStack.peek()) {
+            minStack.push(val);
+        } else {
+            minStack.push(minStack.peek());
+        }
+    }
+
+    public void pop() {
+        stack.pop();
+        minStack.pop();
+    }
+
+    public int top() {
+        return stack.peek();
+    }
+
+    public int getMin() {
+        return minStack.peek();
+    }
+}
+
+```
+
+## 双端队列
+### 力扣
+https://leetcode.cn/problems/design-circular-deque
+
+### 代码
+```java
+
+class MyCircularDeque {
+
+    private int[] data;
+
+    int l = 0;
+    int r = 0;
+    int limit;
+    int size = 0;
+
+    public MyCircularDeque(int k) {
+        data = new int[k];
+        limit = k;
+    }
+
+    public boolean insertFront(int value) {
+        if (isFull()) {
+            return false;
+        }
+        l = (l - 1 + limit) % limit;
+        data[l] = value;
+        size++;
+        return true;
+    }
+
+    public boolean insertLast(int value) {
+        if (isFull()) {
+            return false;
+        }
+        data[r] = value;
+        r = (r + 1 + limit) % limit;
+        size++;
+        return true;
+    }
+
+    public boolean deleteFront() {
+        if (isEmpty()) {
+            return false;
+        }
+        l = (l + 1 + limit) % limit;
+        size--;
+        return true;
+    }
+
+    public boolean deleteLast() {
+        if (isEmpty()) {
+            return false;
+        }
+        r = (r - 1 + limit) % limit;
+        size--;
+        return true;
+    }
+
+    public int getFront() {
+        if (isEmpty()) {
+            return -1;
+        }
+        return data[l];
+    }
+
+    public int getRear() {
+        if (isEmpty()) {
+            return -1;
+        }
+        return data[(r - 1 + limit) % limit];
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    public boolean isFull() {
+        return size == limit;
+    }
+}
+
 ```
