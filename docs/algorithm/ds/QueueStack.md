@@ -81,6 +81,45 @@ https://leetcode.cn/problems/implement-queue-using-stacks
 ### Java代码
 ```java
 
+class MyQueue {
+
+    private Stack<Integer> s1;
+    private Stack<Integer> s2;
+
+    public MyQueue() {
+        s1 = new Stack<>();
+        s2 = new Stack<>();
+    }
+
+    public void push(int x) {
+        s1.push(x);
+    }
+
+    public int pop() {
+        s1ToS2();
+        return s2.pop();
+    }
+
+    public int peek() {
+        s1ToS2();
+        return s2.peek();
+    }
+
+    private void s1ToS2(){
+        if (!s2.isEmpty()) {
+            return ;
+        }
+
+        while (!s1.isEmpty()) {
+            s2.push(s1.pop());
+        }
+    }
+
+    public boolean empty() {
+        return s1.isEmpty() && s2.isEmpty();
+    }
+}
+
 ```
 
 ## 队列实现栈
@@ -89,7 +128,35 @@ https://leetcode.cn/problems/implement-stack-using-queues/
 
 ### 代码
 ```java
+class MyStack {
 
+    private Queue<Integer> queue;
+
+
+    public MyStack() {
+        queue = new LinkedList<>();
+    }
+
+    public void push(int x) {
+        int len = queue.size();
+        queue.offer(x);
+        for (int i = 0; i < len; i++) {
+            queue.offer(queue.poll());
+        }
+    }
+
+    public int pop() {
+        return queue.poll();
+    }
+
+    public int top() {
+        return queue.peek();
+    }
+
+    public boolean empty() {
+        return queue.isEmpty();
+    }
+}
 ```
 
 ## 最小栈
