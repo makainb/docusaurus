@@ -3,16 +3,16 @@ title: 算法导航
 ---
 
 ## 前置知识
-【[对数器](/algorithm/pre/Validator.md)】|【[等差数列](/algorithm/pre/AP.md)】【[等比数列](/algorithm/pre/GP.md)】
+【[对数器](/docs/algorithm/pre/Validator)】|【[等差数列](/docs/algorithm/pre/AP)】|【[等比数列](/docs/algorithm/pre/GP)】|【[算法刷题的输入输出](/docs/algorithm/pre/ReaderWriter)】
 
 ## 基础算法
 
 ### 排序算法
-【[选择排序](/algorithm/basic/sort/SelectionSort.md)】|【[冒泡排序](/algorithm/basic/sort/BubblingSort.md)】|【[插入排序](/algorithm/basic/sort/InsertSort.md)】
+【[选择排序](/docs/algorithm/basic/sort/SelectionSort)】|【[冒泡排序](/docs/algorithm/basic/sort/BubblingSort)】|【[插入排序](/docs/algorithm/basic/sort/InsertSort)】
 
 ### 搜索算法
-【[二分搜索](/algorithm/basic/search/BinarySearch.md)】
+【[二分搜索](/docs/algorithm/basic/search/BinarySearch)】
 
 
 ## 数据结构
-【[链表](/algorithm/ds/LinkedList.md)】|【[队列和栈](/algorithm/ds/QueueStack.md)】|【[二叉树](/algorithm/ds/BinaryTree.md)】
+【[链表](/docs/algorithm/ds/LinkedList)】|【[队列和栈](/docs/algorithm/ds/QueueStack)】|【[二叉树](/docs/algorithm/ds/BinaryTree)】

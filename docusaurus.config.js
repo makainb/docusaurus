@@ -15,7 +15,7 @@ import rehypeKatex from 'rehype-katex';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '凉皮店主',
-  tagline: '山东坑灰犹未冷，原来刘项不读书。',
+  tagline: '只见广厦千万，不见寒士欢颜。',
   favicon: 'img/favicon.ico',
   url: 'https://makainb.com',
   baseUrl: '/',
