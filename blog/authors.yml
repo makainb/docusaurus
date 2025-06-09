@@ -4,9 +4,9 @@ makai:
   url: https://makainb.com
   image_url: /img/makai.jpg
   page: true
-  socials:
+  # socials:
     # x: yangshunz
-    github: makainb
+    # github: makainb
 
 # slorber:
 #   name: Sébastien Lorber

@@ -105,7 +105,9 @@ const config = {
           { label: '算法', to: '/docs/algorithm/intro',sidebarId:'algorithmSidebar',},
           { label: '工具', sidebarId:'toolsSidebar', to: '/docs/tools/jetbrains-idea',},
           { label: 'MOM文档', sidebarId:'momSidebar', to: '/docs/mom/use/base-tools',},
-          // {to: '/blog', label: '博客'},
+          { label: '博客', position: 'right', to: '/blog'},
+          { label: '归档', position: 'right', to: '/blog/archive',},
+
 
           /*
           {
