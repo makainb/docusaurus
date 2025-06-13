@@ -104,7 +104,25 @@ const config = {
           // { label: 'Java', sidebarId:'javaSidebar', to: '/docs/java/intro',},
           { label: '算法', to: '/docs/algorithm/intro',sidebarId:'algorithmSidebar',},
           { label: '工具', sidebarId:'toolsSidebar', to: '/docs/tools/jetbrains-idea',},
-          { label: 'MOM文档', sidebarId:'momSidebar', to: '/docs/mom/use/base-tools',},
+          // { label: 'MOM文档', sidebarId:'momSidebar', to: '/docs/mom/use/base-tools',},
+          {
+            label:'项目',
+            type: 'dropdown',
+            items: [
+              // 分隔符
+              { type: 'html', value: '<b>工厂</b>', className: 'dropdown-archived-versions',},
+              { to: '/docs/project/aps/readme.md', label: 'APS',},
+              // { to: '/docs/project/aboutsite', label: 'WMS', },
+
+              // { type: 'html', value: '<hr class="dropdown-separator">',},           
+              // { type: 'html', value: '<hr class="dropdown-separator">',},
+              // // 分组名
+              // { type: 'html', value: '<b>Archived versions</b>', className: 'dropdown-archived-versions',},
+              
+            ],
+          },
+
+
           { label: '博客', position: 'right', to: '/blog'},
           { label: '归档', position: 'right', to: '/blog/archive',},
 
