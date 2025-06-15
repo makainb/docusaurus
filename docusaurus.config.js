@@ -111,7 +111,7 @@ const config = {
             items: [
               // 分隔符
               { type: 'html', value: '<b>工厂</b>', className: 'dropdown-archived-versions',},
-              { to: '/docs/project/aps/readme.md', label: 'APS',},
+              { to: '/docs/project/aps/intro', label: 'APS',},
               // { to: '/docs/project/aboutsite', label: 'WMS', },
 
               // { type: 'html', value: '<hr class="dropdown-separator">',},           
