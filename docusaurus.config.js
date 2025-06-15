@@ -123,8 +123,8 @@ const config = {
           },
 
 
-          { label: '博客', position: 'right', to: '/blog'},
-          { label: '归档', position: 'right', to: '/blog/archive',},
+          // { label: '博客', position: 'right', to: '/blog'},
+          { label: '博客', position: 'right', to: '/blog/archive',},
 
 
           /*
