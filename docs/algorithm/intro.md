@@ -8,7 +8,7 @@ title: 算法导航
 ## 基础算法
 
 ### 排序算法
-【[选择排序](/docs/algorithm/basic/sort/SelectionSort)】|【[冒泡排序](/docs/algorithm/basic/sort/BubblingSort)】|【[插入排序](/docs/algorithm/basic/sort/InsertSort)】
+【[选择排序](/docs/algorithm/basic/sort/SelectionSort)】|【[冒泡排序](/docs/algorithm/basic/sort/BubblingSort)】|【[插入排序](/docs/algorithm/basic/sort/InsertSort)】|【归并排序】
 
 ### 搜索算法
 【[二分搜索](/docs/algorithm/basic/search/BinarySearch)】
