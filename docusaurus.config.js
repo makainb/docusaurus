@@ -108,6 +108,7 @@ const config = {
           {
             label:'DevOps',
             type: 'dropdown',
+            sidevarId: 'devopsSidebar',
             items: [
 
               // 分隔符
