@@ -115,27 +115,28 @@ const config = {
               { to: '/docs/devops/jira/intro', label: 'Jira',},
 
               { type: 'html', value: '<b>文档管理</b>', className: 'dropdown-archived-versions',},
-              { to: '/docs/confluence/intro', label: 'Confluence',},
+              { to: '/docs/devops/confluence/intro', label: 'Confluence',},
 
               { type: 'html', value: '<b>代码管理</b>', className: 'dropdown-archived-versions',},
               // { to: '/about/todo', label: 'Gitlab',},
               // { to: '/about/todo', label: 'Gitea',},
 
               { type: 'html', value: '<b>制品管理</b>', className: 'dropdown-archived-versions',},
-              { to: '/docs/nexus/intro', label: 'Nexus',},
+              { to: '/docs/devops/nexus/intro', label: 'Nexus',},
 
-              { type: 'html', value: '<b>持续集成</b>', className: 'dropdown-archived-versions',},
+              // { type: 'html', value: '<b>持续集成</b>', className: 'dropdown-archived-versions',},
               // { to: '/about/todo', label: 'Drone',},
               // { to: '/about/todo', label: 'Jenkins',},
               // { to: '/about/todo', label: 'Tekton',},
 
-              { type: 'html', value: '<b>质量检查</b>', className: 'dropdown-archived-versions',},
+              // { type: 'html', value: '<b>质量检查</b>', className: 'dropdown-archived-versions',},
               // { to: '/about/todo', label: 'Sonarcube',},
 
-              { type: 'html', value: '<b>持续部署</b>', className: 'dropdown-archived-versions',},
+              // { type: 'html', value: '<b>持续部署</b>', className: 'dropdown-archived-versions',},
               // { to: '/about/todo', label: 'ArgoCD',},
               // { to: '/about/todo', label: 'KubeVela',},
               // { to: '/about/todo', label: 'Zadig',},
+
               
             ],
           },
