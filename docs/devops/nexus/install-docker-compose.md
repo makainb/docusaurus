@@ -6,7 +6,7 @@ sidebar_position: 2
 ## 创建目录
 ```shell
 mkdir -p /opt/soft/nexus/ && cd /opt/soft/nexus/
-mkdir nexus-data && chown -R 200 /some/dir/nexus-data
+mkdir nexus-data && chown -R 200 nexus-data
 ```
 
 ## Docker Compose文件
@@ -21,6 +21,11 @@ services:
       - 8081:8081
     volumes:
       - ./nexus-data:/nexus-data
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 65535
+        hard: 65535
 ```
 
 ## 首次登录查看密码
