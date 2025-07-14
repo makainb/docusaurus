@@ -106,18 +106,36 @@ const config = {
           { label: '工具', sidebarId:'toolsSidebar', to: '/docs/tools/jetbrains-idea',},
           // { label: 'MOM文档', sidebarId:'momSidebar', to: '/docs/mom/use/base-tools',},
           {
-            label:'项目',
+            label:'DevOps',
             type: 'dropdown',
             items: [
-              // 分隔符
-              { type: 'html', value: '<b>工厂</b>', className: 'dropdown-archived-versions',},
-              { to: '/docs/project/aps/intro', label: 'APS',},
-              // { to: '/docs/project/aboutsite', label: 'WMS', },
 
-              // { type: 'html', value: '<hr class="dropdown-separator">',},           
-              // { type: 'html', value: '<hr class="dropdown-separator">',},
-              // // 分组名
-              // { type: 'html', value: '<b>Archived versions</b>', className: 'dropdown-archived-versions',},
+              // 分隔符
+              { type: 'html', value: '<b>项目管理</b>', className: 'dropdown-archived-versions',},
+              { to: '/docs/devops/jira/intro', label: 'Jira',},
+
+              { type: 'html', value: '<b>文档管理</b>', className: 'dropdown-archived-versions',},
+              { to: '/docs/confluence/intro', label: 'Confluence',},
+
+              { type: 'html', value: '<b>代码管理</b>', className: 'dropdown-archived-versions',},
+              // { to: '/about/todo', label: 'Gitlab',},
+              // { to: '/about/todo', label: 'Gitea',},
+
+              { type: 'html', value: '<b>制品管理</b>', className: 'dropdown-archived-versions',},
+              { to: '/docs/nexus/intro', label: 'Nexus',},
+
+              { type: 'html', value: '<b>持续集成</b>', className: 'dropdown-archived-versions',},
+              // { to: '/about/todo', label: 'Drone',},
+              // { to: '/about/todo', label: 'Jenkins',},
+              // { to: '/about/todo', label: 'Tekton',},
+
+              { type: 'html', value: '<b>质量检查</b>', className: 'dropdown-archived-versions',},
+              // { to: '/about/todo', label: 'Sonarcube',},
+
+              { type: 'html', value: '<b>持续部署</b>', className: 'dropdown-archived-versions',},
+              // { to: '/about/todo', label: 'ArgoCD',},
+              // { to: '/about/todo', label: 'KubeVela',},
+              // { to: '/about/todo', label: 'Zadig',},
               
             ],
           },
