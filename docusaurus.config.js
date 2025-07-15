@@ -119,27 +119,27 @@ const config = {
               { to: '/docs/devops/confluence/intro', label: 'Confluence',},
 
               { type: 'html', value: '<b>代码管理</b>', className: 'dropdown-archived-versions',},
-              { to: '/about/todo', label: 'Gitlab',},
-              { to: '/about/todo', label: 'Gitea',},
+              // { to: '/about/todo', label: 'Gitlab',},
+              // { to: '/about/todo', label: 'Gitea',},
 
               { type: 'html', value: '<b>制品管理</b>', className: 'dropdown-archived-versions',},
               { to: '/docs/devops/nexus/intro', label: 'Nexus',},
 
-              { type: 'html', value: '<b>持续集成</b>', className: 'dropdown-archived-versions',},
-              { to: '/about/todo', label: 'Drone',},
-              { to: '/about/todo', label: 'Jenkins',},
-              { to: '/about/todo', label: 'Tekton',},
+              // { type: 'html', value: '<b>持续集成</b>', className: 'dropdown-archived-versions',},
+              // { to: '/about/todo', label: 'Drone',},
+              // { to: '/about/todo', label: 'Jenkins',},
+              // { to: '/about/todo', label: 'Tekton',},
 
-              { type: 'html', value: '<b>质量检查</b>', className: 'dropdown-archived-versions',},
-              { to: '/about/todo', label: 'Sonarcube',},
+              // { type: 'html', value: '<b>质量检查</b>', className: 'dropdown-archived-versions',},
+              // { to: '/about/todo', label: 'Sonarcube',},
 
-              { type: 'html', value: '<b>持续部署</b>', className: 'dropdown-archived-versions',},
-              { to: '/about/todo', label: 'ArgoCD',},
-              { to: '/about/todo', label: 'KubeVela',},
-              { to: '/about/todo', label: 'Zadig',},
+              // { type: 'html', value: '<b>持续部署</b>', className: 'dropdown-archived-versions',},
+              // { to: '/about/todo', label: 'ArgoCD',},
+              // { to: '/about/todo', label: 'KubeVela',},
+              // { to: '/about/todo', label: 'Zadig',},
 
-              { type: 'html', value: '<b>监控报警</b>', className: 'dropdown-archived-versions',},
-              { to: '/about/todo', label: 'Prometheus',},
+              { type: 'html', value: '<b>监控预警</b>', className: 'dropdown-archived-versions',},
+              { to: '/docs/devops/prometheus/install-docker-compose', label: 'Prometheus',},
               
             ],
           },
