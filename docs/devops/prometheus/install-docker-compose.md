@@ -12,7 +12,7 @@ docker pull prom/prometheus
 
 ## 创建文件夹
 ```bash
-mkdir -p conf data 
+mkdir -p conf data && chown -R 777 conf data
 ```
 
 ## 找到并复制配置文件
@@ -28,7 +28,7 @@ cp /var/xxxx/prometheus.yml conf/prometheus.yml
 ```yaml
 services:
   prometheus:
-    image: prom/prometheus:latest
+    image: prom/prometheus:v3.5.0
     container_name: prometheus
     volumes:
       - ./conf/prometheus.yml:/etc/prometheus/prometheus.yml
