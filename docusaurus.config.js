@@ -145,7 +145,7 @@ const config = {
           },
 
 
-          // { label: '博客', position: 'right', to: '/blog'},
+          // { label: '1博客', position: 'right', to: '/blog'},
           { label: '博客', position: 'right', to: '/blog/archive',},
 
 
