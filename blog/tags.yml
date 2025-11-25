@@ -1,9 +1,5 @@
-python:
-  label: go语言
-  permalink: /go
-  description: go语言也没有kotlin好用，但是有一个优点，可以编译本地文件。
+RAP:
+  label: RAP
+  permalink: /RAP
+  description: 跟着这个节奏摇摆身体 双眼紧闭 我忘了自己
 
-java:
-  label: java
-  permalink: /java
-  description: Java语言确实不如Kotlin好用。

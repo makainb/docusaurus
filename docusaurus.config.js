@@ -14,7 +14,7 @@ import rehypeKatex from 'rehype-katex';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '凉皮店主',
+  title: '写代码的说唱诗人',
   tagline: '只见广厦千万，不见寒士欢颜。',
   favicon: 'img/favicon.ico',
   url: 'https://makainb.com',
@@ -32,7 +32,7 @@ const config = {
   themes: ['@docusaurus/theme-mermaid'],
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -100,49 +100,61 @@ const config = {
         // },
         items: [
           // {label: '文档',type: 'docSidebar',sidebarId: 'tutorialSidebar'},
-          { label: '导航', sidebarId:'allSidebar', to: '/docs/intro',},
+          // { label: '导航', sidebarId:'allSidebar', to: '/docs/intro',},
           // { label: 'Java', sidebarId:'javaSidebar', to: '/docs/java/intro',},
-          { label: '算法', to: '/docs/algorithm/intro',sidebarId:'algorithmSidebar',},
-          { label: '工具', sidebarId:'toolsSidebar', to: '/docs/tools/jetbrains-idea',},
+          // { label: '算法', to: '/docs/algorithm/intro',sidebarId:'algorithmSidebar',},
+          // { label: '工具', sidebarId:'toolsSidebar', to: '/docs/tools/jetbrains-idea',},
           // { label: 'MOM文档', sidebarId:'momSidebar', to: '/docs/mom/use/base-tools',},
           {
-            label:'DevOps',
+            label:'Spring',
             type: 'dropdown',
             sidevarId: 'devopsSidebar',
             items: [
 
               // 分隔符
-              { type: 'html', value: '<b>项目管理</b>', className: 'dropdown-archived-versions',},
-              { to: '/docs/devops/jira/intro', label: 'Jira',},
+              { type: 'html', value: '<b>SpringBoot新特性</b>', className: 'dropdown-archived-versions',},
+              { to: '/docs/spring/boot-feat7/a00', label: 'SpringBoot7新特性',},
 
-              { type: 'html', value: '<b>文档管理</b>', className: 'dropdown-archived-versions',},
-              { to: '/docs/devops/confluence/intro', label: 'Confluence',},
-
-              { type: 'html', value: '<b>代码管理</b>', className: 'dropdown-archived-versions',},
-              // { to: '/about/todo', label: 'Gitlab',},
-              // { to: '/about/todo', label: 'Gitea',},
-
-              { type: 'html', value: '<b>制品管理</b>', className: 'dropdown-archived-versions',},
-              { to: '/docs/devops/nexus/intro', label: 'Nexus',},
-
-              // { type: 'html', value: '<b>持续集成</b>', className: 'dropdown-archived-versions',},
-              // { to: '/about/todo', label: 'Drone',},
-              // { to: '/about/todo', label: 'Jenkins',},
-              // { to: '/about/todo', label: 'Tekton',},
-
-              // { type: 'html', value: '<b>质量检查</b>', className: 'dropdown-archived-versions',},
-              // { to: '/about/todo', label: 'Sonarcube',},
-
-              // { type: 'html', value: '<b>持续部署</b>', className: 'dropdown-archived-versions',},
-              // { to: '/about/todo', label: 'ArgoCD',},
-              // { to: '/about/todo', label: 'KubeVela',},
-              // { to: '/about/todo', label: 'Zadig',},
-
-              { type: 'html', value: '<b>监控预警</b>', className: 'dropdown-archived-versions',},
-              { to: '/docs/devops/prometheus/install-docker-compose', label: 'Prometheus',},
-              
-            ],
+            ]
           },
+          // {
+          //   label:'DevOps',
+          //   type: 'dropdown',
+          //   sidevarId: 'devopsSidebar',
+          //   items: [
+
+          //     // 分隔符
+          //     { type: 'html', value: '<b>项目管理</b>', className: 'dropdown-archived-versions',},
+          //     { to: '/docs/devops/jira/intro', label: 'Jira',},
+
+          //     { type: 'html', value: '<b>文档管理</b>', className: 'dropdown-archived-versions',},
+          //     { to: '/docs/devops/confluence/intro', label: 'Confluence',},
+
+          //     { type: 'html', value: '<b>代码管理</b>', className: 'dropdown-archived-versions',},
+          //     // { to: '/about/todo', label: 'Gitlab',},
+          //     // { to: '/about/todo', label: 'Gitea',},
+
+          //     { type: 'html', value: '<b>制品管理</b>', className: 'dropdown-archived-versions',},
+          //     { to: '/docs/devops/nexus/intro', label: 'Nexus',},
+
+          //     // { type: 'html', value: '<b>持续集成</b>', className: 'dropdown-archived-versions',},
+          //     // { to: '/about/todo', label: 'Drone',},
+          //     // { to: '/about/todo', label: 'Jenkins',},
+          //     // { to: '/about/todo', label: 'Tekton',},
+
+          //     // { type: 'html', value: '<b>质量检查</b>', className: 'dropdown-archived-versions',},
+          //     // { to: '/about/todo', label: 'Sonarcube',},
+
+          //     // { type: 'html', value: '<b>持续部署</b>', className: 'dropdown-archived-versions',},
+          //     // { to: '/about/todo', label: 'ArgoCD',},
+          //     // { to: '/about/todo', label: 'KubeVela',},
+          //     // { to: '/about/todo', label: 'Zadig',},
+
+          //     { type: 'html', value: '<b>监控预警</b>', className: 'dropdown-archived-versions',},
+          //     { to: '/docs/devops/prometheus/install-docker-compose', label: 'Prometheus',},
+              
+          //   ],
+          // },
 
 
           // { label: '1博客', position: 'right', to: '/blog'},

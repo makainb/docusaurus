@@ -59,6 +59,21 @@
   }
 }
 
-.container {
+/* .container {
   max-width: none;
+} */
+
+/* 让 Docusaurus v3 的 docs 内容部分全屏 */
+.theme-doc-markdown,
+.theme-doc-content,
+.container {
+  max-width: 100% !important;
+  width: 98% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* 让整个 docs 页面无左右留白 */
+.theme-doc-markdown {
+  margin: 0 !important;
 }
