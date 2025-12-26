@@ -164,14 +164,11 @@ public void readView(){
 
 
 ## 我的思考
-1、如果全局的返回类BaseEntity和Code取消，让Http Response Code 正式使用起来。将会有如下好处。
-2、视图分组，解决类爆炸问题
-3、Record，解决模板代码的问题
+1、如果全局的返回类BaseEntity和Code取消，让Http Response Code 正式使用起来。将会有如下好处。  
+2、视图分组，解决类爆炸问题  
+3、Record，解决模板代码的问题  
 
-漂亮啊，这个办法真好。。
-
-可惜了周围配合的技术路子太野，不管是APP还是WEB端都用习惯了code模式，至今不用全局 http code 配置，愁。。
-
+但是如果这么用的话就会出现一个问题，就是返回值是真返回值，而不是代替http状态码
 
 ## **更多资源**
 * [Spring Boot 4.0 发布说明](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.0-Release-Notes)
