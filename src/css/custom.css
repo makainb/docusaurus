@@ -77,3 +77,10 @@
 .theme-doc-markdown {
   margin: 0 !important;
 }
+
+/* 让复选框看起来大一点 */
+ul li input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 8px;
+  cursor: pointer;
+}
