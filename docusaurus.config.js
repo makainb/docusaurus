@@ -7,7 +7,7 @@ import remarkBreaks from "remark-breaks";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "写代码的说唱诗人",
+  title: "藏鲸阁",
   tagline: "只见广厦千万，不见寒士欢颜。",
   favicon: "img/favicon.ico",
   url: "https://makainb.com",

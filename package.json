@@ -24,7 +24,8 @@
     "react-dom": "^19.2.0",
     "rehype-katex": "^7.0.1",
     "remark-breaks": "^4.0.0",
-    "remark-math": "^6.0.0"
+    "remark-math": "^6.0.0",
+    "typewriter-effect": "^2.22.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.9.2",
