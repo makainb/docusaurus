@@ -1,86 +1,142 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+/* 使用第三方维护的更纱黑体 webfont 镜像 */
+@import url('https://cdn.jsdelivr.net/npm/sarasa-gothic-webfont@1.0.0/index.min.css');
 
-/* You can override the default Infima variables here. */
+
+/* ============================================================
+   1. 全局变量与字号微调 (整体调小一号)
+   ============================================================ */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: "Sarasa Gothic SC", sans-serif;
+  --ifm-font-size-base: 94%; /* 整体字号调小 */
+  --ifm-h1-font-size: 1.8rem;
+  --ifm-h2-font-size: 1.5rem;
+  --ifm-h3-font-size: 1.25rem;
+  
+  /* 侧边栏字号与间距优化 */
+  --ifm-menu-link-sublist-font-size: 0.85rem;
+  --ifm-menu-link-padding-vertical: 6px;
+  
+  /* 基础动画定义 */
+  --nav-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+/* ============================================================
+   2. 首页专属样式 (配合 index.js 中的 .home-page-custom-style)
+   ============================================================ */
+
+/* 首页导航栏：透明 + 消除边框 */
+.home-page-custom-style .navbar {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-bottom: none !important;
+  transition: var(--nav-transition);
 }
 
-/* .navbar__logo{
-  display: none;
-} */
+/* 首页导航悬停：微磨砂感 */
+.home-page-custom-style .navbar:hover {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(8px);
+}
 
+/* 首页导航文字：白色 + 霓虹立体感阴影 */
+.home-page-custom-style .navbar__item,
+.home-page-custom-style .navbar__title,
+.home-page-custom-style .navbar__link {
+  color: white !important;
+  text-shadow: 
+    1px 1px 0px #ff00ff,   /* 霓虹粉边线 */
+    -1px -1px 0px #00ffff, /* 霓虹青边线 */
+    2px 2px 5px rgba(0, 0, 0, 0.8); /* 深色投影 */
+  letter-spacing: 1px;
+}
 
-.code-block-highlighted-line {
-  background-color: rgb(72, 77, 91);
-  span[class*='codeLineNumber'] {
-    background-color: rgb(72, 77, 91);
+/* 首页搜索框 */
+.home-page-custom-style .navbar__search-input {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+/* ============================================================
+   3. 通用导航栏样式 (所有页面生效)
+   ============================================================ */
+
+/* 导航链接基础样式：增加点击感 */
+.navbar__link, .navbar__title {
+  font-weight: 600;
+  transition: var(--nav-transition);
+  position: relative; /* 为下标准确定位 */
+}
+
+/* 亮色模式文字阴影，增加清晰度 */
+html[data-theme='light'] .navbar__link {
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* 鼠标悬停动作 */
+.navbar__link:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+}
+
+/* --- 动态下标系统 --- */
+
+/* 基础下标：所有页面的选中项 */
+.navbar__link--active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 10%;
+  width: 80%;
+  height: 3px;
+  border-radius: 4px;
+  background: var(--ifm-color-primary);
+  box-shadow: 0 0 8px var(--ifm-color-primary-lighter);
+  animation: slideIn 0.35s ease-out;
+}
+
+/* 首页专属：霓虹彩色下标 */
+.home-page-custom-style .navbar__link--active::after {
+  background: #00ffff !important; 
+  box-shadow: 0 0 12px #00ffff, 0 0 20px #5181e9 !important;
+}
+
+/* 未选中项悬停下标：半透明预显 */
+.navbar__link:not(.navbar__link--active):hover::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  transition: var(--nav-transition);
+}
+
+/* ============================================================
+   4. 动画定义
+   ============================================================ */
+
+@keyframes slideIn {
+  from { width: 0; left: 50%; opacity: 0; }
+  to { width: 80%; left: 10%; opacity: 1; }
+}
+
+/* ============================================================
+   5. 响应式处理 (手机端优化)
+   ============================================================ */
+
+@media (max-width: 996px) {
+  /* 手机端菜单背景通常是白/黑不透明，取消首页的透明白字效果以免看不清 */
+  .home-page-custom-style .navbar__link,
+  .home-page-custom-style .navbar__title {
+    color: inherit !important;
+    text-shadow: none !important;
+  }
+  
+  .home-page-custom-style .navbar {
+    background-color: var(--ifm-navbar-background-color) !important;
+    backdrop-filter: none;
   }
 }
-.code-block-add-line {
-  background-color: #213227;
-  span[class*='codeLineNumber'] {
-    background-color: #213227;
-  }
-}
-.code-block-update-line {
-  background-color: #362d1e;
-  span[class*='codeLineNumber'] {
-    background-color: #362d1e;
-  }
-}
-.code-block-error-line {
-  background-color: #ff000020;
-  span[class*='codeLineNumber'] {
-    background-color: #ff000020;
-  }
-}
 
-/* .container {
-  max-width: none;
-} */
-
-/* 让 Docusaurus v3 的 docs 内容部分全屏 */
-.theme-doc-markdown,
-.theme-doc-content,
-.container {
-  max-width: 100% !important;
-  width: 98% !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-/* 让整个 docs 页面无左右留白 */
-.theme-doc-markdown {
-  margin: 0 !important;
-}
-
-/* 让复选框看起来大一点 */
-ul li input[type="checkbox"] {
-  transform: scale(1.2);
-  margin-right: 8px;
-  cursor: pointer;
-}
