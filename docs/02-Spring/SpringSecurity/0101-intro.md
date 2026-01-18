@@ -1,5 +1,6 @@
 ---
-title: 基础-Spring Security 概述
+title: 快速入门-Spring Security 概述
+sidebar_position: 0101
 ---
 ## Spring Security简介
 
@@ -11,11 +12,11 @@ Spring Security 是一个 **专注于为 Java 应用提供 认证（Authenticati
 
 身份认证的作用是：如何证明“你是你”？ 
 Spring Security 支持多种认证协议，我们需要根据业务场景进行权衡：
-常见的认证方式：
+常见的认证方式对比：
 
 | 认证方式 | 交互形式 | 安全性 | 适用场景 |
 | --- | --- | --- | --- |
-| **HTTP Basic** | 浏览器原生弹窗 | 极低（Base64编码） | 内网微服务调用、API 快速调试 |
+| **HTTP Basic** | 浏览器原生弹窗 | 低（Base64编码） | 内网微服务调用、API 快速调试 |
 | **Form Login** | 自定义 HTML 表单 | 中（需配合 CSRF 防护） | 传统的单体 Web 网站 |
 | **LDAP / AD** | 内部统一账号 | 高（中心化管理） | 企业内部 OA、GitLab、VPN 登录 |
 | **OAuth2 / OIDC** | 令牌(Token) / JWT | 极高（不暴露密码） | 移动端、微服务、第三方登录 |
@@ -41,7 +42,7 @@ RBAC 的进化：
 
 在多系统并存的企业环境中，**SSO (Single Sign-On, 单点登录)** 是一次登录、全线通行的终极方案。它不是一种加密算法，而是一种**架构模式**。
 
-### SSO 实现协议全盘点
+SSO 实现协议全盘点
 
 | 协议 | 传输格式 | 特点 | 现状 |
 | --- | --- | --- | --- |
@@ -49,13 +50,24 @@ RBAC 的进化：
 | **SAML 2.0** | XML | 安全性极高，但配置极其复杂 | 跨国企业 B2B 集成常用 |
 | **OIDC** | JSON (JWT) | 基于 OAuth2 协议，现代且轻量 | **当前互联网与微服务架构的主流** |
 
-## 5. 总结：新手如何构建安全防线？
+## 总结：新手如何构建安全防线？
 
 1. **单体小项目**：选择 **Form Login + RBAC (Session)**，开发效率最高。
 2. **前后端分离**：选择 **JWT + RBAC (Token)**，摆脱 Session 跨域烦恼。
 3. **大厂内部系统**：选择 **LDAP 认证 + SSO 架构**。
 4. **内网微服务**：可以使用 **HTTP Basic** 进行简单的服务间调用拦截。
 
+
 :::tip[写在最后]
 安全设计的核心在于 **“解耦”**。用户不直接关联权限（用角色解耦），子系统不直接处理登录（用 SSO 解耦）。掌握了这些顶层设计，Spring Security 的代码实现就会变得顺理成章。
 :::
+
+相关资料：
+主页：[Spring Security 官方文档](https://docs.spring.io/spring-security/reference/index.html)
+社区：[Spring Security 社区](https://spring.io/projects/spring-security)
+
+常见的认证框架
+- Spring Security：Spring 生态原生“重量级安全框架"，功能全面（认证、授权、安全防护、生态整合），主打企业级、复杂场景;
+- Apache Shiro：“轻量级通用安全框架"，无强依赖，API 简洁，主打基础安全需求（认证、授权、会话），适配多技术栈；
+- Sa-Token：国产“轻量级高易用性安全框架"，专为Javg 项目（尤其 Spring Boot）设计，聚焦“快速开发"，APi 极简，内置大量开箱
+即用功能（如 SSO、多账号登录、限流）。
