@@ -21,11 +21,14 @@ const config = {
 
   markdown: {
     mermaid: true,
+    hooks:{
+      onBrokenMarkdownLinks: 'warn',
+    }
+    
   },
   themes: ["@docusaurus/theme-mermaid"],
 
   onBrokenLinks: "warn",
-  onBrokenMarkdownLinks: 'warn',
 
   i18n: {
     defaultLocale: "zh-Hans",
