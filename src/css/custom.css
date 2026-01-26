@@ -101,7 +101,7 @@ html[data-theme='light'] .navbar__link {
 }
 
 /* 未选中项悬停下标：半透明预显 */
-.navbar__link:not(.navbar__link--active):hover::after {
+.navbar__item.navbar__link:not(.navbar__link--active):hover::after {
   content: "";
   position: absolute;
   bottom: -4px;
