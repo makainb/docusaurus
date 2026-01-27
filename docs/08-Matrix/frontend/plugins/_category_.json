@@ -1,0 +1,8 @@
+{
+  "label": "插件集成",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "第三方库（Element Plus, Vxe-Table, i18n）的标准化集成与全局配置。"
+  }
+}

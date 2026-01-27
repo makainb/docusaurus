@@ -1,0 +1,8 @@
+{
+  "label": "公共组件",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "基于 Element Plus 二次封装的标准 UI 组件，支持属性透明透传与增强方法。"
+  }
+}

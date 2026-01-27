@@ -108,6 +108,15 @@ const config = {
           // {label: '工具', type: 'docSidebar', sidebarId: 'toolsSidebar', position: 'left'},
           // {label: '项目管理', type: 'docSidebar', sidebarId: 'projectSidebar', position: 'left'},
           // {label: '周报', to: '/weekly', position: 'right'},
+          {
+            label: '架构', 
+            position: 'left', 
+            type: 'dropdown',
+            items: [
+              // {label: 'Spring 全家桶', type: 'docSidebar', sidebarId: 'springSidebar'}, // 指向整个 Spring 侧边栏
+              {label: '前端架构-Matrix', to: '/docs/Matrix/frontend/intro', sidebarId: 'matrixFrontend'}, // 直接跳转到具体的 SpringSecurity 入口
+            ],
+          },
           {label: '周报', to: '/blog', position: 'right'},
           {label: '关于', to: '/about', position: 'right'},
         ],
