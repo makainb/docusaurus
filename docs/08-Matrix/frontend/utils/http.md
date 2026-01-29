@@ -128,3 +128,88 @@ const uploadImage = async (file) => {
 | `onUploadProgress` | `function` | 获取上传进度。 |
 
 ## 错误处理机制
+
+
+## 2026-01-30 优化
+
+### 修改 http.js 的核心逻辑
+我们在 request 函数中增加对简写参数的处理：
+
+```javascript title="src/utils/http.js"
+// 1. 定义 Content-Type 映射表
+const contentTypeMap = {
+  'json': 'application/json;charset=UTF-8',
+  'form': 'application/x-www-form-urlencoded;charset=UTF-8',
+  'file': 'multipart/form-data',
+  'text': 'text/plain'
+};
+
+async function request({ method, url, data, params, type = 'json', headers = {}, ...options }) {
+  // 2. 根据简写 type 自动设置 Content-Type
+  const contentType = contentTypeMap[type] || type;
+  
+  const mergedHeaders = {
+    'Content-Type': contentType,
+    ...headers
+  };
+
+  // 后续逻辑保持不变...
+  const res = await instance({ 
+    method, 
+    url, 
+    data, 
+    params, 
+    headers: mergedHeaders, 
+    ...options 
+  });
+  // ...
+}
+```
+
+### 2. 优化后的 http 对象导出
+我们将常用方法进行二次封装，让默认行为更聪明：
+```javascript title="src/utils/http.js"
+export const http = {
+  request,
+  
+  get(url, params, options) { 
+    return request({ method: "get", url, params, ...options }); 
+  },
+
+  // 默认是 JSON，但可以通过 type 快速切换
+  post(url, data, options) { 
+    return request({ method: "post", url, data, ...options }); 
+  },
+
+  // 快捷表单提交 (x-www-form-urlencoded)
+  postForm(url, data, options) {
+    return request({ method: "post", url, data, type: 'form', ...options });
+  },
+
+  // 快捷上传 (multipart/form-data)
+  upload(url, data, options) {
+    return request({ method: "post", url, data, type: 'file', ...options });
+  }
+};
+```
+
+
+### 3. 使用对比：效率大幅提升
+
+以前的写法（啰嗦）：
+```javascript
+mk.http.post('/api/save', data, {
+  headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+});
+```
+现在的写法（极致简洁）：
+```javascript
+// 方式 A：使用 type 参数
+mk.http.post('/api/save', data, { type: 'form' });
+
+// 方式 B：使用语义化方法
+mk.http.postForm('/api/save', data);
+
+// 上传文件也变得非常简单
+mk.http.upload('/api/file/upload', formData);
+```
