@@ -1,0 +1,8 @@
+{
+  "label": "统一工具链",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "包含 HTTP 请求封装、存储封装、全局 Loading 控制、权限校验等纯逻辑工具函数。"
+  }
+}
