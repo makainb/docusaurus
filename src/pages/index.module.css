@@ -67,19 +67,20 @@
   display: block;
   margin: 0 auto 1.5rem auto;
   
-  /* --- 关键：无需悬停就开启彩色呼吸动画 --- */
-  /* 5秒完成一次色彩循环，无限重复 */
-  animation: rainbowBreathe 5s linear infinite;
-}
 
-/* 3. 鼠标悬停时：保持呼吸灯，同时增加转圈 */
-.avatar:hover {
   cursor: pointer;
   /* 同时运行两个动画：呼吸灯和旋转 */
   /* 注意：这里需要再次声明呼吸灯动画，并合并旋转动画 */
   animation: 
     rainbowBreathe 5s linear infinite, 
     spin 2s linear infinite;
+}
+
+/* 3. 鼠标悬停时：保持呼吸灯，同时增加转圈 */
+.avatar:hover {
+  /* --- 关键：无需悬停就开启彩色呼吸动画 --- */
+  /* 5秒完成一次色彩循环，无限重复 */
+  animation: rainbowBreathe 5s linear infinite;
 }
 
 .title {

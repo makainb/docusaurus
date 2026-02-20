@@ -21,6 +21,7 @@ export default function Home() {
                 options={{
                   strings: [
                     siteConfig.tagline,
+                    "身为年迈的剑客不得不承认世界将属于年轻人，但鄙人的剑也未尝不利！",
                     "江湖路远, 有缘再见！",
                   ],
                   autoStart: true,

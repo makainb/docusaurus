@@ -43,10 +43,7 @@
 .home-page-custom-style .navbar__title,
 .home-page-custom-style .navbar__link {
   color: white !important;
-  text-shadow: 
-    1px 1px 0px #ff00ff,   /* 霓虹粉边线 */
-    -1px -1px 0px #00ffff, /* 霓虹青边线 */
-    2px 2px 5px rgba(0, 0, 0, 0.8); /* 深色投影 */
+
   letter-spacing: 1px;
 }
 
