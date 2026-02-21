@@ -93,15 +93,15 @@ const config = {
         title: "藏鲸阁",
         items: [
           // {label: '编程语言', type: 'docSidebar', sidebarId: 'langSidebar', position: 'left'},
-          {
-            label: 'Spring', 
-            position: 'left', 
-            type: 'dropdown',
-            items: [
-              // {label: 'Spring 全家桶', type: 'docSidebar', sidebarId: 'springSidebar'}, // 指向整个 Spring 侧边栏
-              {label: 'Spring Security', to: '/docs/Spring/SpringSecurity/intro'}, // 直接跳转到具体的 SpringSecurity 入口
-            ],
-          },
+          // {
+          //   label: 'Spring', 
+          //   position: 'left', 
+          //   type: 'dropdown',
+          //   items: [
+          //     // {label: 'Spring 全家桶', type: 'docSidebar', sidebarId: 'springSidebar'}, // 指向整个 Spring 侧边栏
+          //     {label: 'Spring Security', to: '/docs/Spring/SpringSecurity/intro'}, // 直接跳转到具体的 SpringSecurity 入口
+          //   ],
+          // },
           // {label: '计算机基础', type: 'docSidebar', sidebarId: 'csSidebar', position: 'left'},
           // {label: '中间件', type: 'docSidebar', sidebarId: 'middlewareSidebar', position: 'left'},
           // {label: '部署', type: 'docSidebar', sidebarId: 'deploySidebar', position: 'left'},
@@ -118,6 +118,7 @@ const config = {
             ],
           },
           {label: '周报', to: '/blog', position: 'right'},
+          {label: '工具', to: '/tools', position: 'right'},
           {label: '关于', to: '/about', position: 'right'},
         ],
       
