@@ -119,6 +119,7 @@ const config = {
           },
           {label: '周报', to: '/blog', position: 'right'},
           {label: '工具', to: '/tools', position: 'right'},
+          {label: '说唱', position: 'right', type: 'docSidebar', sidebarId: 'rapSidebar',},
           {label: '关于', to: '/about', position: 'right'},
         ],
       
