@@ -121,6 +121,28 @@ const config = {
           {label: '工具', to: '/tools', position: 'right'},
           {label: '说唱', position: 'right', type: 'docSidebar', sidebarId: 'rapSidebar',},
           {label: '关于', to: '/about', position: 'right'},
+          // 右上角“我的”下拉菜单分组
+          {
+            label: '我的',
+            position: 'right',
+            type: 'dropdown',
+            items: [
+              {
+                label: '网盘',
+                href: 'https://pan.makaix.com', // 外部网盘链接
+              },
+              // 网盘与关于之间的分割线
+              // 利用 html 类型渲染一条分割线
+              {
+                type: 'html',
+                value: '<hr style="margin: 0.3rem 0; border: none; border-top: 1px solid var(--ifm-color-emphasis-200);" />',
+              },
+              {
+                label: '关于',
+                to: '/about', // 站内关于页面
+              },
+            ],
+          },
         ],
       
       },

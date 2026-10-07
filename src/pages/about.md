@@ -39,6 +39,7 @@ import Admonition from '@theme/Admonition';
 | **持续集成** | [GitHub Actions](https://github.com/) |
 | **域名服务** | [Dynadot](https://www.dynadot.com/) |
 | **网站加速** | [CloudFlare](https://www.cloudflare.com/) |
+| **对象存储** | [R2](https://www.cloudflare.com/) |
 
 ---
 
