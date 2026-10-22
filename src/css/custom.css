@@ -131,9 +131,20 @@ html[data-theme='light'] .navbar__link {
     text-shadow: none !important;
   }
   
-  .home-page-custom-style .navbar {
+  /* 移动端触摸时会触发并保持 :hover 状态，需确保无论是否 hover 都不启用 backdrop-filter，防止创建层叠上下文导致侧边栏被截断或遮挡 */
+  .home-page-custom-style .navbar,
+  .home-page-custom-style .navbar:hover {
     background-color: var(--ifm-navbar-background-color) !important;
-    backdrop-filter: none;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* 确保移动端侧边栏展开时位于遮罩层及其他页面元素之上，避免点不到或被挡住 */
+  .navbar-sidebar {
+    z-index: calc(var(--ifm-z-index-fixed) + 1) !important;
+  }
+  .navbar-sidebar__backdrop {
+    z-index: var(--ifm-z-index-fixed) !important;
   }
 }
 

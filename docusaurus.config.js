@@ -117,10 +117,9 @@ const config = {
               {label: '前端架构-Matrix', to: '/docs/Matrix/frontend/intro', sidebarId: 'matrixFrontend'}, // 直接跳转到具体的 SpringSecurity 入口
             ],
           },
+          {label: '工具', to: '/tools', position: 'left'},
           {label: '周报', to: '/blog', position: 'right'},
-          {label: '工具', to: '/tools', position: 'right'},
           {label: '说唱', position: 'right', type: 'docSidebar', sidebarId: 'rapSidebar',},
-          {label: '关于', to: '/about', position: 'right'},
           // 右上角“我的”下拉菜单分组
           {
             label: '我的',
