@@ -1,0 +1,93 @@
+[
+  {
+    "category": "说唱精选",
+    "catName": "🎙️ 说唱精选 (Hip-Hop & Rap)",
+    "catDesc": "节奏律动与押韵的灵魂碰撞，写词与代码的双重心流。",
+    "tracks": [
+      {
+        "id": "rap-1",
+        "title": "Old School 街头节拍",
+        "artist": "Boom Bap Records",
+        "album": "Urban Cipher",
+        "duration": "02:18",
+        "cover": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&auto=format&fit=crop&q=80",
+        "src": "https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3"
+      },
+      {
+        "id": "rap-2",
+        "title": "East Coast 爵士说唱底噪",
+        "artist": "Jazz Hop Collective",
+        "album": "Midnight Rhyme",
+        "duration": "02:45",
+        "cover": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&auto=format&fit=crop&q=80",
+        "src": "https://assets.mixkit.co/music/preview/mixkit-chill-bro-494.mp3"
+      }
+    ]
+  },
+  {
+    "category": "深夜编码",
+    "catName": "☕ 深夜编码 (Lo-Fi / Coding)",
+    "catDesc": "没有繁杂歌词的干扰，适合通宵 Coding、排查 Bug 与专注心流。",
+    "tracks": [
+      {
+        "id": "lofi-1",
+        "title": "Coffee & Code 咖啡与键鸣",
+        "artist": "Chill Beats Studio",
+        "album": "Terminal Lo-Fi",
+        "duration": "02:30",
+        "cover": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=400&auto=format&fit=crop&q=80",
+        "src": "https://assets.mixkit.co/music/preview/mixkit-relaxing-in-nature-522.mp3"
+      },
+      {
+        "id": "lofi-2",
+        "title": "Rainy Window 窗外细雨",
+        "artist": "Sleepy Cat Beats",
+        "album": "Late Night Walk",
+        "duration": "03:40",
+        "cover": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&auto=format&fit=crop&q=80",
+        "src": "https://assets.mixkit.co/music/preview/mixkit-sleepy-cat-135.mp3"
+      }
+    ]
+  },
+  {
+    "category": "民谣与器乐",
+    "catName": "🎸 民谣器乐 (Acoustic & Folk)",
+    "catDesc": "指尖滑过琴弦的微响，午后阳光斜照，享受平静舒缓的自然治愈。",
+    "tracks": [
+      {
+        "id": "folk-1",
+        "title": "Mountain Forest 山林清风",
+        "artist": "Acoustic Melody",
+        "album": "Wilderness Whisper",
+        "duration": "02:50",
+        "cover": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=400&auto=format&fit=crop&q=80",
+        "src": "https://assets.mixkit.co/music/preview/mixkit-serene-view-443.mp3"
+      },
+      {
+        "id": "folk-2",
+        "title": "Campfire Melody 营火随笔",
+        "artist": "Wooden Strings",
+        "album": "Quiet Journey",
+        "duration": "02:22",
+        "cover": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&auto=format&fit=crop&q=80",
+        "src": "https://assets.mixkit.co/music/preview/mixkit-raising-me-higher-34.mp3"
+      }
+    ]
+  },
+  {
+    "category": "赛博流行",
+    "catName": "🌙 赛博氛围 (Synthwave / Chill)",
+    "catDesc": "复古合成器音色与霓虹低频，仿佛置身未来都市的夜行飞船。",
+    "tracks": [
+      {
+        "id": "synth-1",
+        "title": "Neon Horizon 霓虹地平线",
+        "artist": "Cyber Pulse",
+        "album": "Retro 1984",
+        "duration": "03:15",
+        "cover": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=400&auto=format&fit=crop&q=80",
+        "src": "https://assets.mixkit.co/music/preview/mixkit-hazy-after-hours-132.mp3"
+      }
+    ]
+  }
+]

@@ -1,0 +1,460 @@
+/* 页面外层容器 */
+.musicContainer {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+/* 顶部标题区 */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  background: var(--ifm-color-primary-lightest, rgba(46, 133, 85, 0.1));
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+}
+
+.subtitle {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   分类 Tab 导航
+   ============================================================ */
+.categoryNav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2.2rem;
+}
+
+.categoryTab {
+  background: var(--ifm-card-background-color, #ffffff);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-800);
+  padding: 0.55rem 1.2rem;
+  border-radius: 22px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.categoryTab:hover {
+  background: var(--ifm-color-emphasis-100);
+  transform: translateY(-2px);
+}
+
+.categoryTabActive {
+  background: var(--ifm-color-primary);
+  color: #ffffff;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 4px 14px rgba(46, 133, 85, 0.28);
+}
+
+.categoryTabActive:hover {
+  background: var(--ifm-color-primary);
+}
+
+/* ============================================================
+   左右双栏布局
+   ============================================================ */
+.playerWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* 左侧：黑胶唱片播放卡片 */
+.turntableCard {
+  background: var(--ifm-card-background-color, #ffffff);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 20px;
+  padding: 2.2rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* 黑胶唱片 */
+.vinylContainer {
+  position: relative;
+  width: 210px;
+  height: 210px;
+  margin-bottom: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vinylDisc {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #2a2a2a 0%, #111111 60%, #050505 100%);
+  border: 8px solid #1a1a1a;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35), inset 0 0 0 2px rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* 唱片旋转动画 */
+.vinylSpinning {
+  animation: spin 16s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.vinylCover {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.vinylCenterHole {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--ifm-background-color, #ffffff);
+  border: 2px solid #333;
+}
+
+/* 歌曲信息 */
+.trackInfo {
+  margin-bottom: 1.4rem;
+  width: 100%;
+}
+
+.catBadge {
+  display: inline-block;
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: var(--ifm-color-primary-lightest, rgba(46, 133, 85, 0.12));
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.trackTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trackArtist {
+  font-size: 0.88rem;
+  color: var(--ifm-color-emphasis-600);
+  margin: 0;
+}
+
+/* 进度条 */
+.progressSection {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.progressBar {
+  width: 100%;
+  height: 5px;
+  -webkit-appearance: none;
+  background: var(--ifm-color-emphasis-200);
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  accent-color: var(--ifm-color-primary);
+}
+
+.timeLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-500);
+  margin-top: 0.4rem;
+  font-family: monospace;
+}
+
+/* 控制按钮 */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.controlBtn {
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-800);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.controlBtn:hover {
+  background: var(--ifm-color-emphasis-200);
+  transform: scale(1.05);
+}
+
+.playMainBtn {
+  width: 56px;
+  height: 56px;
+  background: var(--ifm-color-primary);
+  color: #ffffff;
+  border-color: var(--ifm-color-primary);
+  font-size: 1.4rem;
+  box-shadow: 0 4px 14px rgba(46, 133, 85, 0.35);
+}
+
+.playMainBtn:hover {
+  background: var(--ifm-color-primary-dark);
+  transform: scale(1.08);
+}
+
+/* 音量条 */
+.volumeBar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 80%;
+}
+
+.volIcon {
+  font-size: 0.9rem;
+}
+
+.volumeRange {
+  flex-grow: 1;
+  height: 4px;
+  cursor: pointer;
+  accent-color: var(--ifm-color-primary);
+}
+
+.volValue {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-500);
+  min-width: 32px;
+}
+
+/* 右侧面板 */
+.rightPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* 播放列表卡片 */
+.playlistCard {
+  background: var(--ifm-card-background-color, #ffffff);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.catHeader {
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding-bottom: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.catTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.catDesc {
+  font-size: 0.82rem;
+  color: var(--ifm-color-emphasis-600);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.trackList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.trackRow {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.trackRow:hover {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.trackRowActive {
+  background: var(--ifm-color-primary-lightest, rgba(46, 133, 85, 0.12));
+  border-left: 3px solid var(--ifm-color-primary);
+}
+
+.rowCoverWrapper {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.rowCover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 播放中音符波形动画 */
+.playingWave {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 3px;
+  padding-bottom: 6px;
+}
+
+.playingWave span {
+  width: 3px;
+  background: #ffffff;
+  border-radius: 2px;
+  animation: bounce 0.8s infinite ease-in-out alternate;
+}
+
+.playingWave span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.playingWave span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0% {
+    height: 4px;
+  }
+  100% {
+    height: 18px;
+  }
+}
+
+.rowMeta {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.rowTitle {
+  font-size: 0.92rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--ifm-font-color-base);
+}
+
+.rowArtist {
+  font-size: 0.78rem;
+  color: var(--ifm-color-emphasis-500);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rowDuration {
+  font-size: 0.78rem;
+  color: var(--ifm-color-emphasis-500);
+  font-family: monospace;
+}
+
+/* 方案说明卡片 */
+.guideCard {
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 14px;
+  padding: 1.2rem;
+  border: 1px dashed var(--ifm-color-emphasis-300);
+}
+
+.guideCard h4 {
+  font-size: 0.92rem;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.guideCard p {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+}
+
+.guideCard code {
+  color: var(--ifm-color-primary);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .musicContainer {
+    padding: 2rem 1rem 3rem;
+  }
+  .playerWrapper {
+    grid-template-columns: 1fr;
+  }
+}

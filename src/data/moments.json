@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "content": "夜深了，把网站的时间轴逻辑重构为了按天自动聚合。同一天内即使发多条碎碎念，左侧日期也只展示一次，多条说说沿着时间轴依次展开，视觉呼吸感极度舒适。💻✨",
+    "date": "2026-10-23 21:15",
+    "mood": "💡 灵感",
+    "tag": "前端折腾",
+    "likes": 16,
+    "device": "MacBook Pro",
+    "location": "藏鲸阁 · 书房",
+    "images": []
+  },
+  {
+    "id": 2,
+    "content": "午后重新梳理了一遍博客模块，增加了相册与音乐随身听。热爱可抵岁月漫长，继续敲代码！☕️🍃",
+    "date": "2026-10-23 13:30",
+    "mood": "☕ 惬意",
+    "tag": "日常随笔",
+    "likes": 12,
+    "device": "MacBook Pro",
+    "location": "藏鲸阁 · 书房",
+    "images": [
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&auto=format&fit=crop&q=80"
+    ]
+  },
+  {
+    "id": 3,
+    "content": "早晨下楼买了一杯拿铁，阳光斜斜照在落叶上。秋天的清晨格外清爽，深呼吸一口满是泥土与草木的清香。🍂",
+    "date": "2026-10-23 08:45",
+    "mood": "🌸 美好",
+    "tag": "晨光随笔",
+    "likes": 9,
+    "device": "iPhone 16 Pro",
+    "location": "街角咖啡馆",
+    "images": [
+      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&auto=format&fit=crop&q=80"
+    ]
+  },
+  {
+    "id": 4,
+    "content": "“只见广厦千万，不见寒士欢颜。”\n读杜甫诗集有感。技术最终的目的，应当是让更多普通人的生活变得从容而有尊严。",
+    "date": "2026-10-20 22:10",
+    "mood": "🌙 沉思",
+    "tag": "读书感悟",
+    "likes": 19,
+    "device": "iPad Air",
+    "location": "城市阳台",
+    "images": []
+  },
+  {
+    "id": 5,
+    "content": "傍晚下班路上的晚霞太震撼了！粉紫色的云层像是打翻了调色盘，随手一拍都是壁纸。记录一下今天的心动瞬间。📸",
+    "date": "2026-10-18 18:20",
+    "mood": "🌸 美好",
+    "tag": "晚霞胶片",
+    "likes": 27,
+    "device": "Sony A7M4",
+    "location": "滨江步道",
+    "images": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&auto=format&fit=crop&q=80"
+    ]
+  },
+  {
+    "id": 6,
+    "content": "抽空重写了一首说唱 Demo 的第二段 Verse。押韵是骨骼，情绪是血肉，写词的过程就像是一次深度的自我对话。🎙️",
+    "date": "2026-10-12 23:40",
+    "mood": "🎙️ 律动",
+    "tag": "说唱创作",
+    "likes": 31,
+    "device": "Logic Pro",
+    "location": "个人录音间",
+    "images": []
+  }
+]

@@ -120,6 +120,16 @@ const config = {
           {label: '工具', to: '/tools', position: 'left'},
           {label: '周报', to: '/blog', position: 'right'},
           {label: '说唱', position: 'right', type: 'docSidebar', sidebarId: 'rapSidebar',},
+          {
+            label: '生活馆',
+            position: 'right',
+            type: 'dropdown',
+            items: [
+              {label: '💬 说说动态', to: '/moments'},
+              {label: '📷 光影相册', to: '/gallery'},
+              {label: '🎵 随身听', to: '/music'},
+            ],
+          },
           // 右上角“我的”下拉菜单分组
           {
             label: '我的',

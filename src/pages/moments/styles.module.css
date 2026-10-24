@@ -1,0 +1,384 @@
+/* ============================================================
+   专业级无框时间轴样式 (按天自动聚合 / Day-Grouped Timeline)
+   ============================================================ */
+
+.timelinePage {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 6rem;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "PingFang SC", sans-serif;
+}
+
+/* 顶部标题区 */
+.headerSection {
+  margin-bottom: 3.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.headerTag {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.pageTitle {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.02em;
+}
+
+.pageSubtitle {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+}
+
+/* 过滤筛选条 */
+.filterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filterBtn {
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid transparent;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.8rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.filterBtn:hover {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.filterBtnActive {
+  background: var(--ifm-color-primary);
+  color: #ffffff;
+}
+
+/* ============================================================
+   核心时间轴容器
+   ============================================================ */
+.timelineContainer {
+  position: relative;
+}
+
+/* 单日大分组 (Day Section) */
+.daySection {
+  display: grid;
+  /* 左侧固定日期 130px | 中间轴线 24px | 右侧内容 1fr */
+  grid-template-columns: 130px 24px 1fr;
+  column-gap: 1.2rem;
+  padding-bottom: 3.8rem;
+  position: relative;
+}
+
+/* ============================================================
+   1. 左侧：当天的年月日（同一天只显示一次）
+   ============================================================ */
+.dateCol {
+  text-align: right;
+  padding-top: 1px;
+}
+
+.dateStickyBox {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: sticky;
+  top: 80px; /* 滚动时随视口停留，体验极佳 */
+}
+
+/* 大号月日 */
+.monthDayText {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ifm-font-color-base);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+/* 年份与星期 */
+.yearWeekText {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--ifm-color-emphasis-500);
+  margin-top: 0.35rem;
+  font-weight: 500;
+}
+
+.weekBadge {
+  background: var(--ifm-color-emphasis-100);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+/* 今日多条贴心小徽章 */
+.dayCountTag {
+  font-size: 0.7rem;
+  color: var(--ifm-color-primary);
+  background: var(--ifm-color-primary-lightest, rgba(46, 133, 85, 0.1));
+  padding: 2px 7px;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+/* ============================================================
+   2. 中间时间轴轨道
+   ============================================================ */
+.axisCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* 当天的一级主锚点圆环 */
+.dayMainDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--ifm-background-color, #ffffff);
+  border: 3px solid var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px var(--ifm-color-primary-lightest, rgba(46, 133, 85, 0.2));
+  margin-top: 5px;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+/* 贯穿全天的纵向主线 */
+.dayTrackLine {
+  position: absolute;
+  top: 20px;
+  bottom: -4px;
+  width: 1.5px;
+  background: var(--ifm-color-emphasis-200);
+  z-index: 1;
+}
+
+/* ============================================================
+   3. 右侧：当天内各条说说内容
+   ============================================================ */
+.contentCol {
+  padding-top: 0;
+  min-width: 0;
+}
+
+/* 移动端专属日期头部 */
+.mobileDayHeader {
+  display: none;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px dashed var(--ifm-color-emphasis-200);
+}
+
+.mobileMonthDay {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--ifm-font-color-base);
+}
+
+.mobileYearWeek {
+  font-size: 0.78rem;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.mobileCountTag {
+  font-size: 0.72rem;
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+/* 当天所属的所有条目流 */
+.subStream {
+  display: flex;
+  flex-direction: column;
+}
+
+.momentEntry {
+  position: relative;
+}
+
+/* 条目头部：具体时刻标签 + 心情 + 设备 */
+.entryHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.7rem;
+  flex-wrap: wrap;
+}
+
+/* 时刻胶囊（解决同一天不同时间点的问题） */
+.timeBadge {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-700);
+  background: var(--ifm-color-emphasis-100);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.moodPill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  background: var(--ifm-color-primary-lightest, rgba(46, 133, 85, 0.1));
+  padding: 2px 7px;
+  border-radius: 6px;
+}
+
+.tagPill {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.deviceLabel {
+  font-size: 0.72rem;
+  color: var(--ifm-color-emphasis-400);
+  margin-left: auto;
+}
+
+/* 正文段落：完全通透，去框化 */
+.textContent {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--ifm-font-color-base);
+  margin-bottom: 1rem;
+}
+
+.textContent p {
+  margin-bottom: 0.5rem;
+}
+
+.textContent p:last-child {
+  margin-bottom: 0;
+}
+
+/* 配图网格 */
+.imageRow {
+  display: grid;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.singleImg {
+  grid-template-columns: minmax(0, 380px);
+}
+
+.multiImg {
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.imageThumb {
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: var(--ifm-color-emphasis-100);
+}
+
+.imageThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.imageThumb:hover img {
+  transform: scale(1.04);
+}
+
+/* 底部操作与地点 */
+.entryFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.locIcon {
+  font-size: 0.85rem;
+}
+
+/* 极简点赞交互 */
+.actionLike {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--ifm-color-emphasis-500);
+  font-size: 0.8rem;
+  padding: 3px 6px;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.actionLike:hover {
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-800);
+}
+
+.actionLiked {
+  color: #e056fd;
+}
+
+.likeCount {
+  font-weight: 600;
+}
+
+/* 同一天内多条记录之间的轻微虚线分割 */
+.entryDivider {
+  margin: 1.8rem 0 1.8rem;
+  border-top: 1px dashed var(--ifm-color-emphasis-200);
+}
+
+/* ============================================================
+   移动端响应式
+   ============================================================ */
+@media (max-width: 680px) {
+  .daySection {
+    grid-template-columns: 18px 1fr;
+    column-gap: 0.9rem;
+    padding-bottom: 2.8rem;
+  }
+  .dateCol {
+    display: none;
+  }
+  .mobileDayHeader {
+    display: flex;
+  }
+  .headerSection {
+    margin-bottom: 2.5rem;
+  }
+  .singleImg {
+    grid-template-columns: 1fr;
+  }
+}
